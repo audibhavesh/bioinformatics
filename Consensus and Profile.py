@@ -36,7 +36,7 @@ def CP(dna_matrix):
 dna_matrix=[]
 count=0
 
-for records in SeqIO.parse("rosalind_cons.txt","fasta"):
+for records in SeqIO.parse("Dna Dataset/rosalind_cons.txt","fasta"):
     dna_set=[]
     for i in range(len(records.seq)):
         dna_set.append(records.seq[i])

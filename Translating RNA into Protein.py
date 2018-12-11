@@ -35,5 +35,5 @@ rna_codon = {'ACC': 'T', 'GUC': 'V', 'ACA': 'T', 'ACG': 'T',
              'GUA': 'V', 'CGA': 'R', 'GCU': 'A', 'UGU': 'C', 'AUU': 'I',
              'UUG': 'L', 'UUA': 'L', 'CGC': 'R', 'UUC': 'F'}
 
-dna_set=open("rosalind_prot.txt","r").read()
+dna_set=open("Dna Dataset/rosalind_prot.txt","r").read()
 RnatoProtein(dna_set,rna_codon)

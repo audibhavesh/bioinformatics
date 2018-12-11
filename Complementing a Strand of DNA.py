@@ -13,5 +13,5 @@ def complement(rev_dna_set):
     print complement_dna_set
 
 
-dna_set =open("rosalind_revc.txt","r").read()
+dna_set =open("Dna Dataset/rosalind_revc.txt","r").read()
 complement("".join(reversed(dna_set.upper())))

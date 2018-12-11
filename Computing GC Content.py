@@ -8,7 +8,7 @@ def gc(dna_set):
 
 
 li={}
-for records in SeqIO.parse("rosalind_gc.txt","fasta"):
+for records in SeqIO.parse("Dna Dataset/rosalind_gc.txt","fasta"):
     li[records.id]=gc(records.seq)
 gc_content=0
 id=""

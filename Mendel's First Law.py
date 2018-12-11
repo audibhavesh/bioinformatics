@@ -13,5 +13,5 @@ def mendel(k, m, n):
     ]
     t = k + m + n
     return sum(p) / t / (t - 1)
-k,m,n=map(float,open("rosalind_iprb.txt").read().split())
+k,m,n=map(float,open("Dna Dataset/rosalind_iprb.txt").read().split())
 print mendel(k,m,n)

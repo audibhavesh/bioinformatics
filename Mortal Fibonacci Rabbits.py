@@ -21,6 +21,6 @@ def Mortalfib(n,m):
     #                 li[i][1]=1
     #
     # print len(li)
-MFR=open("rosalind_fibd.txt","r").read()
+MFR=open("Dna Dataset/rosalind_fibd.txt","r").read()
 n,m=MFR.split(" ")
 Mortalfib(int(n),int(m))
