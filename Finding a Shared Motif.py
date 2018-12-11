@@ -1,30 +1,29 @@
-from Bio import motifs,SeqIO
-def FSM(dna_set1,dna_set2):
-    match=""
-    lcms=[]
-    print len("".join(dna_set2))
-    for i in range(len("".join(dna_set2))):
-        if dna_set1[i]==dna_set2[i]:
-            match+=dna_set2[i]
-        else:
-            if len(match)>=3:
-                lcms.append(match)
-            match=""
-    return lcms
+from Bio import SeqIO
+def FSM(dna_set):
+    dna_set1=dna_set[0]
+    dna_data_set=dna_set[1:]
+
+    motif=""
+    for i in range(len(dna_set1)):
+        for j in range(i,len(dna_set1)):
+            check_motif=dna_set1[i:j+1]
+            f=False
+            for dna in dna_data_set:
+                if check_motif in dna:
+                    f=True
+                else:
+                    f=False
+                    break
+            if f and len(check_motif)>len(motif):
+                motif=check_motif
+    print motif
 
 
 dna_set=[]
-record=[]
-for records in SeqIO.parse("rosalind_lcsm.txt","fasta"):
-        dna_set.append(list((records.seq)))
-print len(dna_set[1])
-freq={}
-comb=FSM(dna_set[0],dna_set[1])
-for i in dna_set:
-    for j in comb:
-        if j in "".join(i):
-            freq[j] = freq.get(j,0)+1
-print max(freq.keys(),key=len)
-print freq
-# s=[s for s,v in freq.items() if v==max(freq.values())]
-# print s
+
+for records in SeqIO.parse("Dna Dataset/rosalind_lcsm.txt","fasta"):
+        dna_set.append(("".join(records.seq)))
+
+FSM(dna_set)
+# for i in dna_set:
+#     print i
