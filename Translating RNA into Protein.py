@@ -15,10 +15,6 @@ def RnatoProtein(dna_set,rna_codon):
             a=""
     print protein
 
-
-
-
-
 rna_codon = {'ACC': 'T', 'GUC': 'V', 'ACA': 'T', 'ACG': 'T',
             'GUU': 'V', 'AAC': 'N', 'CCU': 'P', 'UAU': 'Y',
              'AGC': 'S', 'AUC': 'I', 'CAU': 'H', 'AAU': 'N',
