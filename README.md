@@ -1,3 +1,3 @@
 # bioinformatics
 
-Rosalind Bio Alog Solution
+Rosalind Bio Algo Solution
